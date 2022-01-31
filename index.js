@@ -14,9 +14,9 @@ try{
 {
     console.log("Error: "+error);
 }
-const salemanrouter=require('./saleman')
-app.use('/saleman',salemanrouter)
-const port=4000;
+const Deliverymanrouter=require('./Deliveryman.js')
+app.use('/Deliveryman',Deliverymanrouter)
+const port=5000;
 app.listen(port, () =>{
     console.log('Server started');
 })

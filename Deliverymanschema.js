@@ -1,6 +1,6 @@
 const  mongoose  = require("mongoose")
 
-const saleman=new mongoose.Schema({
+const Deliverymanschema=new mongoose.Schema({
 
     db_roam_id:{
         type:String,
@@ -19,4 +19,4 @@ const saleman=new mongoose.Schema({
     }
 })
 
-module.exports=mongoose.model("Saleman",saleman);
+module.exports=mongoose.model("Deliverymanschema",Deliverymanschema);

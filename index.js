@@ -2,7 +2,7 @@ const express= require('express');
 const mongoose= require('mongoose');
 const app=express();
 
-const url= "mongodb://localhost:27017";
+const url= "mongodb+srv://kushal:xC61OOksRFociM3u@cluster0.pi3hu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(url,{useNewUrlParser: true});
 const con= mongoose.connection;

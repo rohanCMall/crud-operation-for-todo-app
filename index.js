@@ -20,10 +20,10 @@ app.use('/Deliveryman',Deliverymanrouter)
 
 const Urgenttasks=require('./Urgenttasks.js')
 app.use('/Urgenttasks',Urgenttasks)
-app.get("./",(req,res)=>{
+app.get("/",(req,res)=>{
     res.send("Hello, Welcome to kushal App")
 })
-const port=process.env.port || 5000;
+const port=process.env.port || 1137;
 app.listen(port, () =>{
     console.log('Server started');
 })

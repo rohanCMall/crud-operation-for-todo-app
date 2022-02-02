@@ -23,7 +23,12 @@ app.use('/Urgenttasks',Urgenttasks)
 app.get("/",(req,res)=>{
     res.send("Hello, Welcome to kushal App")
 })
-const port=process.env.port || 1137;
+
+const port=process.env.PORT || 1137;
+process.on('uncaughtException', function (error) {
+    console.log(error);
+})
 app.listen(port, () =>{
+    console.log(port)
     console.log('Server started');
 })

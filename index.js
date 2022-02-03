@@ -7,22 +7,22 @@ const url= "mongodb+srv://kushal:xC61OOksRFociM3u@cluster0.pi3hu.mongodb.net/myF
 mongoose.connect(url,{useNewUrlParser: true});
 const con= mongoose.connection;
 app.use(express.json());
-try{
-    con.on('open',() => {
-        console.log('connected');
-    })
-}catch(error)
-{
-    console.log("Error: "+error);
-}
-const Deliverymanrouter=require('./Deliveryman.js')
-app.use('/Deliveryman',Deliverymanrouter)
+// try{
+//     con.on('open',() => {
+//         console.log('connected');
+//     })
+// }catch(error)
+// {
+//     console.log("Error: "+error);
+// }
+// const Deliverymanrouter=require('./Deliveryman.js')
+// app.use('/Deliveryman',Deliverymanrouter)
 
-const Urgenttasks=require('./Urgenttasks.js')
-app.use('/Urgenttasks',Urgenttasks)
-app.get("/",(req,res)=>{
-    res.send("Hello, Welcome to kushal App")
-})
+// const Urgenttasks=require('./Urgenttasks.js')
+// app.use('/Urgenttasks',Urgenttasks)
+// app.get("/",(req,res)=>{
+//     res.send("Hello, Welcome to kushal App")
+// })
 
 const port=process.env.PORT || 80;
 process.on('uncaughtException', function (error) {

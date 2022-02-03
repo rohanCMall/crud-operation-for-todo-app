@@ -14,7 +14,8 @@ router.get('/',async(req,res)=>{
 router.post('/',async(req,res)=>{
     const singleUrgenttask=new Urgenttaskschema({
         name: req.body.name,
-        status :req.body.status
+        status :req.body.status,
+        flag:req.body.flag
 });
     try{
         const save= await singleUrgenttask.save()
@@ -32,5 +33,17 @@ router.delete('/',async(req,res)=>{
     const result=await Urgenttaskschema.deleteMany()
     res.json(result)
 })
-
+router.get('/flag',async(req,res)=>{
+    const flag=req.query.flag;
+    const xx =await Urgenttaskschema.find({
+        "flag": flag
+    })
+    res.send(xx)
+})
+router.get('/flagupdate',async(req,res)=>{
+    const flag=req.query.flag;
+    const status=req.query.status;
+    const xx= await Urgenttaskschema.updateMany({"flag":flag},{"status":status})
+    res.send(xx);
+})
 module.exports = router

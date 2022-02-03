@@ -12,6 +12,10 @@ const Urgenttasksschema=new mongoose.Schema({
         required:true,
         defalut:false
     },
+    flag:{
+        type: String,
+        required:true,
+    }
     
 })
 
